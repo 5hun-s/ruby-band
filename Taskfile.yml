@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - docker compose build
+
+  sh:
+    interactive: true
+    cmds:
+      - docker compose run --rm app bash
+
+  sine_wave_scale:
+    cmds:
+      - docker compose run --rm app ruby examples/sine_wave_scale.rb
+      - afplay "output/sine_wave_scale.wav"

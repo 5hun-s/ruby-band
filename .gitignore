@@ -1,2 +1,3 @@
 *.wav
+output/
 .DS_Store
